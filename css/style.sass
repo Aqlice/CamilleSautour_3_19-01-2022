@@ -1,0 +1,413 @@
+$Primary: #9356DC
+
+$Secondary: #FF79DA
+
+$Tertiary: #99E2D0
+
+$Violet-button: linear-gradient(to bottom right, $Secondary, $Primary)
+
+$Box-shadow: 0 0 20px 2px rgba(211, 211, 211, 0.83)
+
+$Hover: #E6E6FA
+
+@keyframes Spin
+    from
+        width: 0px
+        opacity: 1
+        rotate: 0
+        background-color: transparent
+    to
+        opacity: 1
+        rotate: 360deg
+        width: 70px
+        background-color: $Tertiary
+
+@keyframes Apparition
+    from
+        opacity: 0
+    to
+        opacity: 1  
+
+.Delay-1, .Delay-2, .Delay-3, .Delay-4, .Delay-5, .Delay-6, .Delay-7, .Delay-8, .Delay-9
+    animation-duration: 2s
+    animation-name: Apparition
+    animation-fill-mode: forwards
+
+.Delay-1
+    animation-delay: 0s
+
+.Delay-2
+    animation-delay: 0.2s
+
+.Delay-3
+    animation-delay: 0.4s
+
+.Delay-4
+    animation-delay: 0.6s
+
+.Delay-5
+    animation-delay: 0.8s
+
+.Delay-6
+    animation-delay: 1.0s
+
+.Delay-7
+    animation-delay: 1.2s
+
+.Delay-8
+    animation-delay: 1.4s
+
+.Delay-9
+    animation-delay: 1.6s
+
+.BC-Light-Grey
+    background-color: #F8F8F8
+
+.Center
+    display: flex
+    justify-content: center
+    align-items: center
+
+h1
+    font-size: 15px
+
+h1
+    font-family: Shrikhand
+    font-size: 175%
+
+body
+    font-family: Roboto
+
+.Logo
+    margin-top: 25px
+    margin-bottom: 15px
+    
+    img
+        width: 150px
+
+.Top-border
+    height: 5px
+    background-image: linear-gradient(#D8D8D8, #F0F0F0)
+    
+.Localisation
+    background-color: #F0F0F0
+    
+    i
+        margin-right: 25px
+
+.Description
+    background-color: #F8F8F8
+    flex-direction: column
+    display: flex
+    justify-content: center
+    text-align: center
+    
+    h2
+        width: 70%
+        display: flex
+        justify-content: center
+    
+    p
+        margin-top: -5px
+        width: 80%
+
+.Explore-button
+    margin-top: 10px
+    margin-bottom: 50px
+    background-color: #F8F8F8
+    width: 200px
+    height: 50px
+    border-radius: 30px 30px 30px 30px
+    border: none
+    background-image: $Violet-button
+    color: white
+    box-shadow: 0px 4px 4px lightgray
+    scale: 1
+    transition-duration: 0.5s 
+    &:hover
+        cursor: pointer
+        transform: scale(1.1)
+        opacity: 0.8
+
+.Section-two
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+
+    gap: 20px
+
+    h2
+        width: 60%
+        justify-self: flex-start
+        align-self: flex-start
+        margin: 40px 0 0 20px
+
+.Box-border
+    box-shadow: $Box-shadow
+    border-radius: 20px
+    box-sizing: content-box
+    width: 90%
+    background-color: #F5F5F5
+    justify-content: flex-start
+    gap: 30px
+    
+    i
+        color: gray
+
+    &:hover
+        cursor: pointer
+        background-color: $Hover
+        i
+            color: $Primary
+
+.Circle
+    border: 2px solid $Primary
+    height: 20px
+    width: 20px
+    border-radius: 50%
+    display: flex
+    justify-content: center
+    align-items: center
+    margin-left: -12px
+    background-color: $Primary
+    color: white
+
+.Section-three
+    margin-top: 50px
+    display: flex
+    justify-content: flex-start
+    flex-direction: column
+    gap: 20px
+
+    h2
+        align-self: flex-start
+        margin-bottom: 0
+        margin-left: 20px
+        margin-top: 40px
+    
+    a
+        text-decoration: none
+        color: black
+
+.Thumbnails
+    width: 90%
+    height: 250px
+    flex-direction: column
+    background-color: white
+    align-items: flex-start
+    border-radius: 20px
+    
+    img
+        height: 70%
+        width: 100%
+        object-fit: cover
+        border-radius: 15px 15px 0 0
+
+    .Under-picture
+        margin-top: -10px
+        width: 90%
+        display: flex
+        justify-content: space-between
+        align-items: center
+        margin-left: 10px
+        transition: all 0.3s linear 0s
+
+        p
+            margin-top: -15px
+
+        i
+            position: absolute
+            transition: all 0.5s linear 0s
+            &:hover
+                background: -webkit-linear-gradient($Primary, $Secondary)
+                -webkit-background-clip: text
+                -webkit-text-fill-color: transparent
+                cursor: pointer
+        .Heart
+            &:hover
+                .Heart-1
+                    opacity: 0
+                .Heart-2
+                    opacity: 1
+        
+        .Heart-2
+            opacity: 0
+            color: transparent
+
+.Foot
+    height: 200px
+    padding-left: 20px
+    padding-top: 20px
+    background-color: #282828
+    p
+        margin: 0
+        gap: 10px
+    
+    h1, p, i, a
+        color: white
+        text-decoration: none
+
+
+.Line-icon
+    display: flex
+    justify-content: flex-start
+    align-items: center
+    gap: 10px
+    margin-bottom: 10px
+    i
+        font-size: 10px
+
+.Patch-align
+    i
+        font-size: 7px
+
+.Paragraph
+    p
+        margin-bottom: 10px
+        color: white
+        -webkit-animation: fadein 2s
+        @keyframes fadein
+            from 
+                opacity: 0
+            to
+                opacity: 1
+
+.Logo-1
+    width: 70%
+    display: flex
+    align-items: center
+    justify-content: space-between
+    a
+        color: black
+        padding-left: 10%
+
+.Container
+    position: relative
+    z-index: -1
+    img
+        height: 200px
+        /*object-fit: cover
+        width: 100%
+
+.Menu
+    background-color: #F0F0F0
+    z-index: 0
+
+.Menu-title
+    display: flex
+    align-items: center
+    justify-content: space-between
+    border-radius: 35px 35px 0 0
+    background-color: #F0F0F0
+    z-index: 0
+    width: 100%
+    margin-top: -50px
+    i
+        position: absolute
+        transition: all 0.5s linear 0s
+        margin-left: -10%
+        &:hover
+            background: -webkit-linear-gradient($Primary, $Secondary)
+            -webkit-background-clip: text
+            -webkit-text-fill-color: transparent
+            cursor: pointer
+    .Heart
+        &:hover
+            .Heart-1
+                opacity: 0
+            .Heart-2
+                opacity: 1
+        
+        .Heart-2
+            opacity: 0
+            color: transparent
+    h1
+        padding-left: 35px
+        margin-bottom: 0
+
+.Menu-list
+    padding-left: 10px
+    padding-top: 15px
+    .Meal-type
+        padding-left: 10px
+        
+.Underline
+    height: 2px
+    width: 40px
+    margin-top: -10px
+    margin-left: 10px
+    background-color: $Tertiary
+    margin-bottom: 15px
+
+.Menu-thumbnails
+    width: 95%
+    flex-direction: column
+    background-color: white
+    align-items: flex-start
+    border-radius: 20px
+    height: 70px
+    padding-left: 10px
+    margin-bottom: 20px
+    overflow: hidden
+    opacity: 0
+    h3
+        font-size: 1.1rem
+        margin: 0rem
+        padding-top: 1rem
+    p
+        font-size: 0.9rem
+        width: 80%
+        margin-top: 0.5rem
+        padding-right: 6%
+        margin-bottom: 0
+        overflow: hidden
+        text-overflow: ellipsis
+        white-space: nowrap
+        display: inline-block
+        padding-bottom: 20px
+    div
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        span
+            padding-right: 10px
+            padding-top: 7px
+        .Anim-check
+            color: white
+            margin-top: -37px
+            border-radius: 0 20px 20px 0
+            display: block
+            text-align: center
+            i
+                opacity: 0
+                margin-top: 27px
+
+    &:hover
+        animation-duration: 1.5s
+        .Anim-check
+            animation-name: Spin
+            animation-duration: 1.5s
+            animation-fill-mode: forwards
+            i
+                transition-duration: 1.5s
+                transform: rotate(360deg)
+                opacity: 1
+
+.Command-button
+    margin-top: 40px
+    margin-bottom: 50px
+    background-color: #F8F8F8
+    width: 200px
+    height: 50px
+    border-radius: 30px 30px 30px 30px
+    border: none
+    background-image: $Violet-button
+    color: white
+    box-shadow: 0px 4px 4px lightgray
+    scale: 1
+    transition-duration: 0.5s 
+    &:hover
+        cursor: pointer
+        transform: scale(1.1)
+        opacity: 0.8
