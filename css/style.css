@@ -46,7 +46,7 @@
   }
 }
 
-.Delay-1, .Delay-2, .Delay-3, .Delay-4, .Delay-5, .Delay-6, .Delay-7, .Delay-8, .Delay-9 {
+.Delay-1, .Delay-2, .Delay-3, .Delay-4, .Delay-5, .Delay-6, .Delay-7, .Delay-8, .Delay-9, .Delay-10 {
   -webkit-animation-duration: 2s;
           animation-duration: 2s;
   -webkit-animation-name: Apparition;
@@ -98,6 +98,11 @@
 .Delay-9 {
   -webkit-animation-delay: 1.6s;
           animation-delay: 1.6s;
+}
+
+.Delay-10 {
+  -webkit-animation-delay: 1.8s;
+          animation-delay: 1.8s;
 }
 
 .BC-Light-Grey {
@@ -252,7 +257,7 @@ body {
 
 .Box-border:hover {
   cursor: pointer;
-  background-color: #E6E6FA;
+  background-color: #f3e6ff;
 }
 
 .Box-border:hover i {
@@ -283,6 +288,7 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  background-color: #F8F8F8;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
@@ -291,6 +297,7 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 20px;
+  padding-bottom: 40px;
 }
 
 .Section-three h2 {
@@ -318,6 +325,8 @@ body {
       -ms-flex-align: start;
           align-items: flex-start;
   border-radius: 20px;
+  -webkit-box-shadow: 0 0 20px 2px rgba(211, 211, 211, 0.83);
+          box-shadow: 0 0 20px 2px rgba(211, 211, 211, 0.83);
 }
 
 .Thumbnails img {
@@ -463,7 +472,8 @@ body {
 
 .Container img {
   height: 200px;
-  /*object-fit: cover */
+  -o-object-fit: cover;
+     object-fit: cover;
   width: 100%;
 }
 
@@ -608,6 +618,7 @@ body {
 }
 
 .Menu-thumbnails:hover {
+  cursor: pointer;
   -webkit-animation-duration: 1.5s;
           animation-duration: 1.5s;
 }
