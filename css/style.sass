@@ -1,33 +1,6 @@
-$Primary: #9356DC
-
-$Secondary: #FF79DA
-
-$Tertiary: #99E2D0
-
-$Violet-button: linear-gradient(to bottom right, $Secondary, $Primary)
-
-$Box-shadow: 0 0 20px 2px rgba(211, 211, 211, 0.83)
-
-$Hover: #E6E6FA
-
-@keyframes Spin
-    from
-        width: 0px
-        opacity: 1
-        rotate: 0
-        background-color: transparent
-    to
-        opacity: 1
-        rotate: 360deg
-        width: 70px
-        background-color: $Tertiary
-
-@keyframes Apparition
-    from
-        opacity: 0
-    to
-        opacity: 1  
-
+@import "variables"
+@import "keyframes"
+    
 .lds-dual-ring 
     display: inline-block
     width: 80px
@@ -53,50 +26,6 @@ $Hover: #E6E6FA
     border-color: $Secondary transparent $Tertiary transparent
     animation: lds-dual-ring 4s
     animation-delay: 0s
-
-@keyframes lds-dual-ring 
-    0% 
-        transform: rotate(0deg)
-    99%
-        transform: rotate(360deg)
-    100% 
-        transform: rotate(360deg)
-
-@keyframes loader
-    100%
-        opacity: 0
-        z-index: -10
-
-.dots-bars-3
-    width: 40px
-    height: 26px
-    --c:linear-gradient(currentColor 0 0)
-    background: var(--c) 0 100%, var(--c) 50% 100%, var(--c) 100% 100%
-    background-size: 8px calc(100% - 4px)
-    background-repeat: no-repeat
-    position: absolute
-    z-index: 9999
-    animation-name: Load-page
-    animation-delay: 3s
-
-    &:before
-        content: ""
-        position: absolute
-        width: 8px
-        height: 8px
-        border-radius: 50%
-        background: currentColor
-        left: 0
-        top: 0
-        animation: db3-1 1.5s linear infinite alternate, db3-2 0.75s cubic-bezier(0, 200, 0.8, 200) infinite
-
-@keyframes db3-1
-    100%
-        left: calc(100% - 8px)
-
-@keyframes db3-2
-  100%
-    top: -0.1px
 
 .Delay-1, .Delay-2, .Delay-3, .Delay-4, .Delay-5, .Delay-6, .Delay-7, .Delay-8, .Delay-9, .Delay-10
     animation-duration: 2s
@@ -142,14 +71,16 @@ $Hover: #E6E6FA
     align-items: center
 
 h1
-    font-size: 15px
-
-h1
     font-family: Shrikhand
     font-size: 175%
 
 body
-    font-family: Roboto  
+    font-family: Roboto
+    overflow: hidden
+    animation-delay: 2.5s
+    animation-duration: 2.5s
+    animation-fill-mode: forwards
+    animation-name: overflow
 
 .Loader
     position: fixed
@@ -283,11 +214,28 @@ body
     align-items: flex-start
     border-radius: 20px
     box-shadow: $Box-shadow
+    position: relative
     img
         height: 70%
         width: 100%
         object-fit: cover
         border-radius: 15px 15px 0 0
+
+    .Text-container
+        width: 100px
+        height: 30px
+        background-color: $Tertiary
+        position: relative
+        right: 5%
+        top: 5%
+        position: absolute
+        display: flex
+        justify-content: center
+        align-items: center
+        p
+            padding-top: 30%
+            color: green
+        
 
     .Under-picture
         margin-top: -10px
@@ -304,6 +252,8 @@ body
         i
             position: absolute
             transition: all 0.5s linear 0s
+            font-size: 1.2rem
+            margin-left: -10px
             &:hover
                 background: -webkit-linear-gradient($Primary, $Secondary)
                 -webkit-background-clip: text
@@ -390,6 +340,7 @@ body
     margin-top: -50px
     i
         position: absolute
+        font-size: 1.2rem
         transition: all 0.5s linear 0s
         margin-left: -10%
         &:hover
@@ -416,8 +367,16 @@ body
     padding-top: 15px
     .Meal-type
         padding-left: 10px
-        
-.Underline
+        &:after
+            position: absolute
+            content: ''
+            height: 2px
+            width: 40px
+            display: flex
+            justify-self: flex-start
+            background-color: $Tertiary
+
+/*.Underline
     height: 2px
     width: 40px
     margin-top: -10px
@@ -497,3 +456,94 @@ body
         cursor: pointer
         transform: scale(1.1)
         opacity: 0.8
+
+
+/* Format Tablette*/
+
+@media screen and (min-width: 768px) and (max-width:991px)
+    .Section-two
+        display: flex
+        flex-direction: row
+        flex-wrap: wrap
+        justify-content: flex-start
+        .Box-border
+            width: 35%
+            margin-left: 10%
+        h2
+            margin-left: 10%
+    
+    .Section-three
+        display: flex
+        flex-direction: row
+        flex-wrap: wrap
+        justify-content: space-around
+        .Thumbnails
+            width: 40%
+        h2
+            width: 100%
+    
+    .Logo-1
+        i
+            font-size: 25px
+        h1
+            margin-right: 10%
+            
+
+    .Container
+        img
+            height: 300px
+
+    .Menu-list
+        display: flex
+        flex-direction: row
+        flex-wrap: wrap
+        p
+            width: 100%
+    .Menu-thumbnails
+        width: 40%
+        margin-right: 5%
+
+/* Format Tablette*/
+
+@media screen and (min-width: 992px)
+    .Section-two
+        display: flex
+        flex-direction: row
+        flex-wrap: wrap
+        justify-content: flex-start
+        .Box-border
+            width: 27%
+            margin-left: 3%
+        h2
+            width: 100%
+            margin-left: 3%
+
+    .Section-three
+        display: flex
+        flex-direction: row
+        flex-wrap: wrap
+        justify-content: space-around
+        .Thumbnails
+            width: 40%
+            height: 300px
+            a
+                img
+                    height: 75%
+        h2
+            width: 100%
+            margin-left: 5%
+
+    .Logo-1
+        font-size: 30px
+    .Container
+        img
+            height: 400px
+    .Menu-list
+        display: flex
+        flex-direction: row
+        flex-wrap: wrap
+        p
+            width: 100%
+    .Menu-thumbnails
+        width: 28%
+        margin-right: 3%
