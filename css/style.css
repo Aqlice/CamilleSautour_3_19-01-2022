@@ -886,7 +886,7 @@ body {
   }
 }
 
-/* Format Tablette*/
+/* Format Desktop*/
 @media screen and (min-width: 992px) {
   .Section-two {
     display: -webkit-box;
