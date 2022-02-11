@@ -6,7 +6,7 @@
     width: 80px
     height: 80px
     position : fixed
-    z-index: 9999
+    z-index: 10
     top : 0px
     left : 0px
     height : 100%
@@ -76,6 +76,8 @@ h1
 
 body
     font-family: Roboto
+
+.Body-index
     overflow: hidden
     animation-delay: 2.5s
     animation-duration: 2.5s
@@ -88,6 +90,7 @@ body
     width: 100%
     left: 0
     top: 0
+    z-index: 2
     background-color: rgba(255, 255, 255, 0.90)
     animation: loader 0.01s
     animation-delay: 2.75s
@@ -99,6 +102,20 @@ body
     
     img
         width: 150px
+
+.Logo-1
+    width: 100%
+    display: flex
+    align-items: center
+    justify-content: center
+    position: relative 
+    a
+        color: black
+    i
+        font-size: 20px
+        position: absolute
+        left: 5%
+        top: 40%
 
 .Top-border
     height: 5px
@@ -137,7 +154,7 @@ body
     background-image: $Violet-button
     color: white
     box-shadow: 0px 4px 4px lightgray
-    scale: 1
+    /*scale: 1
     transition-duration: 0.5s 
     &:hover
         cursor: pointer
@@ -308,15 +325,6 @@ body
             to
                 opacity: 1
 
-.Logo-1
-    width: 70%
-    display: flex
-    align-items: center
-    justify-content: space-between
-    a
-        color: black
-        padding-left: 10%
-
 .Container
     position: relative
     z-index: -1
@@ -327,7 +335,6 @@ body
 
 .Menu
     background-color: #F0F0F0
-    z-index: 0
 
 .Menu-title
     display: flex
@@ -335,9 +342,9 @@ body
     justify-content: space-between
     border-radius: 35px 35px 0 0
     background-color: #F0F0F0
-    z-index: 0
     width: 100%
     margin-top: -50px
+    z-index: 0
     i
         position: absolute
         font-size: 1.2rem
@@ -368,21 +375,11 @@ body
     .Meal-type
         padding-left: 10px
         &:after
-            position: absolute
             content: ''
             height: 2px
             width: 40px
             display: flex
-            justify-self: flex-start
             background-color: $Tertiary
-
-/*.Underline
-    height: 2px
-    width: 40px
-    margin-top: -10px
-    margin-left: 10px
-    background-color: $Tertiary
-    margin-bottom: 15px
 
 .Menu-thumbnails
     width: 95%
@@ -399,6 +396,7 @@ body
         font-size: 1.1rem
         margin: 0rem
         padding-top: 1rem
+
     p
         font-size: 0.9rem
         width: 80%
@@ -450,7 +448,7 @@ body
     background-image: $Violet-button
     color: white
     box-shadow: 0px 4px 4px lightgray
-    scale: 1
+    /*scale: 1
     transition-duration: 0.5s 
     &:hover
         cursor: pointer
@@ -460,7 +458,7 @@ body
 
 /* Format Tablette*/
 
-@media screen and (min-width: 768px) and (max-width:991px)
+@media screen and (min-width: 830px) and (max-width:1179px)
     .Section-two
         display: flex
         flex-direction: row
@@ -484,9 +482,8 @@ body
     
     .Logo-1
         i
+            top: 35%
             font-size: 25px
-        h1
-            margin-right: 10%
             
 
     .Container
@@ -497,15 +494,24 @@ body
         display: flex
         flex-direction: row
         flex-wrap: wrap
+        
         p
             width: 100%
     .Menu-thumbnails
+        
         width: 40%
         margin-right: 5%
 
-/* Format Desktop*/
+/* Format Desktop */
 
-@media screen and (min-width: 992px)
+@media screen and (min-width: 1180px)
+
+    .Logo-1
+        font-size: 30px
+        i
+            font-size: 40px
+            top: 30%
+
     .Section-two
         display: flex
         flex-direction: row
@@ -533,8 +539,6 @@ body
             width: 100%
             margin-left: 5%
 
-    .Logo-1
-        font-size: 30px
     .Container
         img
             height: 400px
